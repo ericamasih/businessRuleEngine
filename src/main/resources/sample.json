@@ -1,0 +1,7 @@
+{
+  "products" : ["Phone", "Shirt", "Jeans"],
+  "books" :  ["TMOTB", "TLAM"],
+  "membershipActivate" : ["Ashish", "Erica"],
+  "membershipUpgrade" : ["Erica"],
+  "video" : ["Learning to Ski"]
+}
