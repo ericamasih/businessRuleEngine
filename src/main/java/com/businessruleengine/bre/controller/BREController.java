@@ -4,6 +4,7 @@ import com.businessruleengine.bre.entity.Payment;
 import com.businessruleengine.bre.service.BREService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,5 +27,12 @@ public class BREController {
 
         return breService.handlePaymentOrders(payment);
     }
+
+    @PostMapping("/newRule")
+    public String newRule(@RequestBody NewRule rule) {
+
+        return breService.newRule(rule);
+    }
+
 
 }

@@ -5,26 +5,50 @@ import java.util.List;
 
 public class Rule {
 
-    public static List<String> rulesProducts = Arrays.asList(
+    public  List<String> rulesProducts = new ArrayList<>(Arrays.asList(
             "Generated packing slip for shipping service for product ",
-            "Generated commission payment to agent service for product ");
+            "Generated commission payment to agent service for product "));
 
-    public static List<String> rulesBooks = Arrays.asList(
+    public  List<String> rulesBooks = new ArrayList<>(Arrays.asList(
             "Generated packing slip for shipping service for book ",
             "Generated commission payment to agent service for book ",
-            "Generated Duplicate Packing Slip for Royalty Department service for book ");
+            "Generated Duplicate Packing Slip for Royalty Department service for book "));
 
-    public static List<String> rulesMembershipActivate = Arrays.asList(
+    public  List<String> rulesMembershipActivate = new ArrayList<>(Arrays.asList(
             "Activate the membership for ",
-            "Email Service for activating membership to user ");
+            "Email Service for activating membership to user "));
 
-    public static List<String> rulesMembershipUpgrade = Arrays.asList(
+    public  List<String> rulesMembershipUpgrade = new ArrayList<>(Arrays.asList(
             "Upgrading the membership for ",
-            "Email Service for upgrading membership to user ");
+            "Email Service for upgrading membership to user "));
 
-    public static List<String> rulesVideo = Arrays.asList(
-            "Generated packing slip service for video ");
+    public  List<String> rulesVideo = new ArrayList<>(Arrays.asList(
+            "Generated packing slip service for video "));
 
-    public static List<String> ruleLearningtoSki = Arrays.asList(
-            "Adding First Aid Video to the packaging slip with video ");
+    public  List<String> ruleLearningtoSki = new ArrayList<>(Arrays.asList(
+            "Adding First Aid Video to the packaging slip with video "));
+
+    public void addRulesProducts(String rulesProducts) {
+        this.rulesProducts.add(rulesProducts);
+    }
+
+    public void addRulesBooks(String rulesBooks) {
+        this.rulesBooks.add(rulesBooks);
+    }
+
+    public void addRulesMembershipActivate(String rulesMembershipActivate) {
+        this.rulesMembershipActivate.add(rulesMembershipActivate);
+    }
+
+    public void addRulesMembershipUpgrade(String rulesMembershipUpgrade) {
+        this.rulesMembershipUpgrade.add(rulesMembershipUpgrade);
+    }
+
+    public void addRulesVideo(String rulesVideo) {
+        this.rulesVideo.add(rulesVideo);
+    }
+
+    public void addRuleLearningtoSki(String ruleLearningtoSki) {
+        this.ruleLearningtoSki.add(ruleLearningtoSki);
+    }
 }

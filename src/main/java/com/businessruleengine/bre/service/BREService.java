@@ -41,4 +41,33 @@ public class BREService {
         });
         return responses;
     }
+
+    public String newRule(NewRule rule) {
+
+        String product = rule.getProduct();
+
+        switch(product){
+            case "physical product" :
+                Rule.addRulesProducts(rule.getDescription());
+                break;
+            case "book":
+                Rule.addRulesBooks(rule.getDescription());
+                break;
+            case "membership":
+                Rule.addRulesMembershipActivate(rule.getDescription());
+                break;
+            case "upgrade to a membership":
+                Rule.addRulesMembershipUpgrade(rule.getDescription());
+                break;
+            case "video":
+                Rule.addRulesVideo(rule.getDescription());
+                break;
+            default:
+                return "No Data Found"
+
+
+
+        }
+        return "Successfully added new Rule";
+    }
 }
