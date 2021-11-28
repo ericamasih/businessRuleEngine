@@ -1,6 +1,6 @@
 # Business Rule Engine
 
--Business Rule Engine - Sample application to apply rules based on product type. 
+Business Rule Engine - Sample application to apply rules based on product type. 
 
 
 ## Execution Flow
