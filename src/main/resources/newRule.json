@@ -1,4 +1,4 @@
 {
-  "product" : ["book"],
-  "description" :  ["Give a thank you note"]
+  "product" : "book",
+  "description" :  "Give a thank you note"
 }

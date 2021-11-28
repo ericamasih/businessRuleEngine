@@ -7,7 +7,6 @@ public class NewRule {
     private String product;
     private String description;
 
-
     public NewRule(String products, String description) {
         this.product = products;
         this.description = description;
@@ -21,8 +20,8 @@ public class NewRule {
         return description;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    @Override
+    public String toString() {
         return "NewRule{" +
                 "product=" + product +
                 ", description=" + description +

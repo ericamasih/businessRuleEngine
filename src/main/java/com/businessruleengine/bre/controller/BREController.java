@@ -1,5 +1,6 @@
 package com.businessruleengine.bre.controller;
 
+import com.businessruleengine.bre.entity.NewRule;
 import com.businessruleengine.bre.entity.Payment;
 import com.businessruleengine.bre.service.BREService;
 import org.springframework.beans.factory.annotation.Autowired;

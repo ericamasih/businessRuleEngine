@@ -11,6 +11,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Service
 public class BREService {
 
+    @Autowired
+    Rule rule;
+
     public List<String> handlePaymentOrders(Payment payment) {
 
         List<String> responses = new CopyOnWriteArrayList<>();
@@ -18,49 +21,49 @@ public class BREService {
         // For more clarity, each of the payments types can be in new functions
 
         payment.getProducts().forEach(e -> {
-            Rule.rulesProducts.forEach(f -> responses.add(f + e));
+            rule.rulesProducts.forEach(f -> responses.add(f + e));
         });
 
         payment.getBooks().forEach(e -> {
-            Rule.rulesBooks.forEach(f -> responses.add(f + e));
+            rule.rulesBooks.forEach(f -> responses.add(f + e));
         });
 
         payment.getMembershipActivate().forEach(e -> {
-            Rule.rulesMembershipActivate.forEach(f -> responses.add(f + e));
+            rule.rulesMembershipActivate.forEach(f -> responses.add(f + e));
         });
 
         payment.getMembershipUpgrade().forEach(e -> {
-            Rule.rulesMembershipUpgrade.forEach(f -> responses.add(f + e));
+            rule.rulesMembershipUpgrade.forEach(f -> responses.add(f + e));
         });
 
         payment.getVideo().forEach(e -> {
-            Rule.rulesVideo.forEach(f -> responses.add(f + e));
+            rule.rulesVideo.forEach(f -> responses.add(f + e));
             if(e.equals("Learning to Ski")) {
-                Rule.ruleLearningtoSki.forEach(g -> responses.add(g + e));
+                rule.ruleLearningtoSki.forEach(g -> responses.add(g + e));
             }
         });
         return responses;
     }
 
-    public String newRule(NewRule rule) {
+    public String newRule(NewRule newRule) {
 
-        String product = rule.getProduct();
+        String product = newRule.getProduct();
 
         switch(product){
             case "physical product" :
-                Rule.addRulesProducts(rule.getDescription());
+                rule.addRulesProducts(newRule.getDescription());
                 break;
             case "book":
-                Rule.addRulesBooks(rule.getDescription());
+                rule.addRulesBooks(newRule.getDescription());
                 break;
             case "membership":
-                Rule.addRulesMembershipActivate(rule.getDescription());
+                rule.addRulesMembershipActivate(newRule.getDescription());
                 break;
             case "upgrade to a membership":
-                Rule.addRulesMembershipUpgrade(rule.getDescription());
+                rule.addRulesMembershipUpgrade(newRule.getDescription());
                 break;
             case "video":
-                Rule.addRulesVideo(rule.getDescription());
+                rule.addRulesVideo(newRule.getDescription());
                 break;
             default:
                 return "No Data Found"
